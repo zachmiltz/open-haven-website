@@ -1,14 +1,15 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 const navItems = [
-  { label: "Principles", href: "#principles" },
-  { label: "Protocols", href: "#protocols" },
-  { label: "Export", href: "#export" },
+  { label: "Convergence", href: "#convergence" },
+  { label: "Navigator", href: "#navigator" },
+  { label: "Registry", href: "/registry" },
   { label: "Contributors", href: "#contributors" },
   { label: "Resources", href: "#resources" },
 ]
@@ -44,20 +45,30 @@ export function Navigation() {
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-1 md:flex">
-          {navItems.map((item) => (
-            <button
-              key={item.href}
-              type="button"
-              onClick={() => scrollTo(item.href)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-            >
-              {item.label}
-            </button>
-          ))}
+          {navItems.map((item) =>
+            item.href.startsWith("/") ? (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <button
+                key={item.href}
+                type="button"
+                onClick={() => scrollTo(item.href)}
+                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              >
+                {item.label}
+              </button>
+            )
+          )}
           <Button
             size="sm"
             className="ml-4"
-            onClick={() => scrollTo("#protocols")}
+            onClick={() => scrollTo("#navigator")}
           >
             Find Your Stack
           </Button>
@@ -73,19 +84,30 @@ export function Navigation() {
           </SheetTrigger>
           <SheetContent side="right" className="w-72">
             <div className="mt-8 flex flex-col gap-4">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  type="button"
-                  onClick={() => scrollTo(item.href)}
-                  className="rounded-md px-3 py-2 text-left text-base font-medium text-foreground transition-colors hover:bg-muted"
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) =>
+                item.href.startsWith("/") ? (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="rounded-md px-3 py-2 text-left text-base font-medium text-foreground transition-colors hover:bg-muted"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.href}
+                    type="button"
+                    onClick={() => scrollTo(item.href)}
+                    className="rounded-md px-3 py-2 text-left text-base font-medium text-foreground transition-colors hover:bg-muted"
+                  >
+                    {item.label}
+                  </button>
+                )
+              )}
               <Button
                 className="mt-4"
-                onClick={() => scrollTo("#protocols")}
+                onClick={() => scrollTo("#navigator")}
               >
                 Find Your Stack
               </Button>

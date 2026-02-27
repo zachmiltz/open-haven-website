@@ -52,7 +52,7 @@ export function ProtocolChatbot() {
         )}
       >
         <Bot className="h-5 w-5" />
-        <span className="hidden sm:inline">Ask the Protocol Advisor</span>
+        <span className="hidden sm:inline">Protocol Advisor (Coming Soon)</span>
       </button>
 
       {/* Chat Window */}
@@ -91,8 +91,7 @@ export function ProtocolChatbot() {
                   Hi! I can help you understand these protocols.
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Check compatibility with your existing stack, or guide
-                  implementation decisions. What are you building?
+                  Coming soon — for now, explore the Navigator or browse the full registry.
                 </p>
               </div>
 

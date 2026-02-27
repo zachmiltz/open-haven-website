@@ -1,9 +1,9 @@
+// app/page.tsx
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/sections/hero-section"
-import { DisclaimerBanner } from "@/components/sections/disclaimer-banner"
-import { PrinciplesSection } from "@/components/sections/principles-section"
-import { ProtocolDirectory } from "@/components/sections/protocol-directory"
-import { ExportSection } from "@/components/sections/export-section"
+import { BetaBadge } from "@/components/sections/beta-badge"
+import { ConvergenceSection } from "@/components/sections/convergence-section"
+import { NavigatorSection } from "@/components/sections/navigator-section"
 import { ContributorsSection } from "@/components/sections/contributors-section"
 import { ResourcesSection } from "@/components/sections/resources-section"
 import { Footer } from "@/components/footer"
@@ -14,10 +14,9 @@ export default function Home() {
     <main className="min-h-screen">
       <Navigation />
       <HeroSection />
-      <DisclaimerBanner />
-      <PrinciplesSection />
-      <ProtocolDirectory />
-      <ExportSection />
+      <BetaBadge />
+      <ConvergenceSection />
+      <NavigatorSection />
       <ContributorsSection />
       <ResourcesSection />
       <Footer />

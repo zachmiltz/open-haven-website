@@ -276,3 +276,22 @@ export const protocols: Protocol[] = [
 
 // Legacy export for compatibility (used by PromptExportDialog)
 export const categories = ["All", ...Array.from(new Set(protocols.map(p => p.entityType)))]
+
+// Contributors data
+export interface Contributor {
+  id: string
+  name: string
+  affiliation: string
+  bio: string
+  protocols: string[]
+}
+
+export const contributors: Contributor[] = [
+  {
+    id: "zach-miltz",
+    name: "Zach Miltz",
+    affiliation: "OpenHaven",
+    bio: "Researching open protocols and building tools for decentralized communities.",
+    protocols: ["Matrix", "ActivityPub", "Holochain"],
+  },
+]
