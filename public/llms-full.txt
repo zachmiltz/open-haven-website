@@ -1,0 +1,274 @@
+# OpenHaven — Open Protocol Navigator
+# openhaven.net/llms-full.txt
+# Full context for AI ingestion — paste into any AI IDE or agent
+# Last updated: 2026-02-27 (Beta)
+
+## What is OpenHaven
+
+OpenHaven is a community-led convergence hub for the P2P and decentralized protocol landscape,
+built in partnership with the Collaborative Technology Alliance (CTA). The Open Protocol Navigator
+helps people find the right protocols for their use case using a Use Cases → Affordances → Tools
+navigation model.
+
+Mission: Making the open protocol landscape interoperable and interact-able — navigable by the
+people who need it. Technical convergence depends on social convergence.
+
+Data quality: All entries are human-verified. Claims are marked as verified or claimed (unverified).
+Every entry carries a last_investigated date. This is a beta — data is real but growing.
+
+## Use Case Domains
+
+### communication
+Name: Communication
+Description: Secure, private, censorship-resistant messaging and publishing for individuals and groups.
+
+### identity-trust
+Name: Identity & Trust
+Description: Self-sovereign identity, verifiable credentials, and reputation without centralized gatekeepers.
+
+### group-governance
+Name: Group Formation & Governance
+Description: Collective decision-making, coordination, and governance for communities and organizations.
+
+### co-creation
+Name: Co-Creation & Knowledge
+Description: Collaborative editing, shared knowledge bases, and creative work without platform lock-in.
+
+### events-coordination
+Name: Events & Coordination
+Description: Scheduling, resource coordination, and logistics for distributed groups.
+
+### mutual-aid
+Name: Mutual Aid & Exchange
+Description: Resource sharing, gifting economies, and peer-to-peer exchange without extractive intermediaries.
+
+### platform-sovereignty
+Name: Platform Evolution & Sovereignty
+Description: Tools and protocols for building, hosting, and governing your own digital infrastructure.
+
+### relationship-awareness
+Name: Relationship & Awareness
+Description: Frontier Territory — Emerging protocols for social graphs, trust networks, and collective sense-making.
+
+## Affordances Framework
+
+### e2e-encrypted
+Name: End-to-end encrypted
+Description: Messages are encrypted on your device — no server can read them.
+Domains: communication, co-creation
+
+### censorship-resistant
+Name: Censorship-resistant
+Description: No single party can block or remove content.
+Domains: communication, platform-sovereignty
+
+### offline-capable
+Name: Works offline
+Description: Functions without continuous internet — syncs when reconnected.
+Domains: communication, co-creation, mutual-aid
+
+### self-hostable
+Name: Self-hostable
+Description: You can run your own server — no dependency on a third-party service.
+Domains: communication, platform-sovereignty, group-governance
+
+### federated
+Name: Federated
+Description: Different servers can talk to each other — no single company controls the network.
+Domains: communication, group-governance
+
+### self-sovereign
+Name: Self-sovereign identity
+Description: Your identity is controlled by you, not an app or platform.
+Domains: identity-trust
+
+### verifiable-credentials
+Name: Verifiable credentials
+Description: Cryptographic proofs of claims — portable, privacy-preserving attestations.
+Domains: identity-trust
+
+### no-central-authority
+Name: No central authority
+Description: No company or government is required to validate your identity.
+Domains: identity-trust, platform-sovereignty
+
+### on-chain-governance
+Name: On-chain governance
+Description: Decisions recorded immutably — auditable by all participants.
+Domains: group-governance
+
+### consent-based
+Name: Consent-based membership
+Description: Joining and leaving is voluntary and cryptographically verifiable.
+Domains: group-governance, mutual-aid
+
+### crdt-sync
+Name: Conflict-free real-time sync
+Description: Multiple people edit simultaneously — merges automatically without conflicts.
+Domains: co-creation
+
+### local-first
+Name: Local-first
+Description: Your data lives on your device first — cloud is optional.
+Domains: co-creation, communication
+
+### no-intermediary
+Name: No intermediary
+Description: Peer-to-peer exchange without a platform extracting fees or data.
+Domains: mutual-aid
+
+### resource-tracking
+Name: Resource tracking
+Description: Tracks offers, needs, and flows across a network transparently.
+Domains: mutual-aid, events-coordination
+
+### open-source
+Name: Open source
+Description: Code is publicly auditable — no black boxes.
+Domains: platform-sovereignty, communication, co-creation
+
+### data-portability
+Name: Data portability
+Description: Export your data anytime in standard formats — no lock-in.
+Domains: platform-sovereignty, identity-trust
+
+## Protocol Registry
+
+### Matrix
+Entity Type: Federated Protocol
+Architecture: Federated
+Governance: Foundation
+Capture Risk: Low
+License: Apache-2.0
+Self-hostable: Yes
+Summary: Open standard for decentralized, real-time communication. Powers Element and hundreds of other clients.
+Verified capabilities: End-to-end encrypted, Self-hostable, Federated, Open source
+Claimed capabilities: Censorship-resistant
+Last investigated: 2026-01-20
+Draft: Yes
+Doc link: https://matrix.org/docs/
+Community link: https://matrix.to/#/#matrix:matrix.org
+Contributor note: Draft — pending full review by data team
+
+### ActivityPub
+Entity Type: Federated Protocol
+Architecture: Federated
+Governance: Open Standard Body
+Capture Risk: Low
+License: W3C
+Self-hostable: Yes
+Summary: W3C standard powering Mastodon, PeerTube, and the broader Fediverse. Largest federated social network.
+Verified capabilities: Federated, Self-hostable, Open source, Data portability
+Claimed capabilities: Censorship-resistant
+Last investigated: 2026-01-15
+Draft: Yes
+Doc link: https://www.w3.org/TR/activitypub/
+Community link: https://socialhub.activitypub.rocks/
+Contributor note: Draft — pending full review by data team
+
+### DIDs + Verifiable Credentials
+Entity Type: Identity Protocol
+Architecture: Hybrid
+Governance: Open Standard Body
+Capture Risk: Low
+License: W3C
+Self-hostable: Yes
+Summary: W3C standards for decentralized identifiers and verifiable credentials. Foundation for self-sovereign identity.
+Verified capabilities: Self-sovereign identity, Verifiable credentials, No central authority, Open source
+Claimed capabilities: Data portability
+Last investigated: 2026-01-10
+Draft: Yes
+Doc link: https://www.w3.org/TR/did-core/
+Community link: https://identity.foundation/
+Contributor note: Draft — pending full review by data team
+
+### Holochain
+Entity Type: P2P Protocol
+Architecture: Fully P2P
+Governance: Foundation
+Capture Risk: Low
+License: CAL-1.0
+Self-hostable: Yes
+Summary: Agent-centric distributed computing framework for peer-to-peer applications. No global consensus required.
+Verified capabilities: No central authority, Open source, Local-first
+Claimed capabilities: Works offline, Self-hostable, Consent-based membership
+Last investigated: 2026-01-18
+Draft: Yes
+Doc link: https://developer.holochain.org/
+Community link: https://discord.gg/holochain
+Contributor note: Draft — pending full review by data team
+
+### NextGraph
+Entity Type: P2P Protocol
+Architecture: Fully P2P
+Governance: Community
+Capture Risk: Low
+License: AGPL-3.0
+Self-hostable: Yes
+Summary: Local-first, E2EE, P2P platform combining CRDTs and semantic web. Presented at FOSDEM 2026.
+Verified capabilities: End-to-end encrypted, Local-first, Conflict-free real-time sync, Open source
+Claimed capabilities: Works offline, Censorship-resistant
+Last investigated: 2026-02-01
+Draft: Yes
+Doc link: https://nextgraph.org/docs/
+Community link: https://matrix.to/#/#nextgraph:matrix.org
+Contributor note: Draft — pending full review by data team
+
+### Murmurations
+Entity Type: Semantic & Data Protocol
+Architecture: Federated
+Governance: Community
+Capture Risk: Low
+License: MIT
+Self-hostable: Yes
+Summary: Distributed data sharing protocol for mapping organizations and projects across networks.
+Verified capabilities: Open source, Data portability, Federated
+Claimed capabilities: No intermediary, Resource tracking
+Last investigated: 2026-01-05
+Draft: Yes
+Doc link: https://murmurations.network/
+Community link: https://discord.gg/murmurations
+Contributor note: Draft — pending full review by data team
+
+### IPFS
+Entity Type: P2P Infrastructure
+Architecture: Fully P2P
+Governance: Foundation
+Capture Risk: Medium
+License: MIT
+Self-hostable: Yes
+Summary: Content-addressed peer-to-peer hypermedia distribution protocol. Mature ecosystem, wide adoption.
+Verified capabilities: Open source, Censorship-resistant, Self-hostable
+Claimed capabilities: Data portability
+Last investigated: 2026-01-12
+Draft: Yes
+Doc link: https://docs.ipfs.tech/
+Community link: https://discord.gg/ipfs
+Contributor note: Draft — capture risk medium due to Protocol Labs concentration
+
+### Nostr
+Entity Type: P2P Protocol
+Architecture: Federated
+Governance: Community
+Capture Risk: Low
+License: Public Domain
+Self-hostable: Yes
+Summary: Notes and Other Stuff Transmitted by Relays. Simple relay-based protocol with cryptographic identities.
+Verified capabilities: Censorship-resistant, Self-hostable, Open source, No central authority
+Claimed capabilities: End-to-end encrypted
+Last investigated: 2026-01-08
+Draft: Yes
+Doc link: https://nostr.com/
+Community link: https://nostr.com/
+Contributor note: Draft — e2e encryption is opt-in via NIP-44, not default
+
+## Data Quality Notes
+
+- verified: capability independently confirmed by OpenHaven data team
+- claimed: stated by project, not yet independently verified
+- isDraft: entry is in progress — treat with appropriate caution
+- lastInvestigated: date of last review by data team
+- captureRisk: low = foundation/open-standard/community governance; medium = concentration risk; high = single company control
+
+Full interactive Navigator: openhaven.net
+Full registry: openhaven.net/registry
