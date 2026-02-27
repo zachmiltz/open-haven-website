@@ -288,10 +288,10 @@ export interface Contributor {
 
 export const contributors: Contributor[] = [
   {
-    id: "zach-miltz",
-    name: "Zach Miltz",
+    id: "openhaven-team",
+    name: "OpenHaven Team",
     affiliation: "OpenHaven",
-    bio: "Researching open protocols and building tools for decentralized communities.",
+    bio: "A collaborative group researching open protocols and building tools for decentralized communities.",
     protocols: ["Matrix", "ActivityPub", "Holochain"],
   },
 ]

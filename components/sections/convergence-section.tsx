@@ -11,7 +11,7 @@ const signals = [
     icon: Users,
     title: "The Coalition Is Growing",
     description:
-      "OpenHaven is built by a coalition spanning CTA, DWeb, ARG, and independent researchers. This page represents collective work — not a single organization's view of the landscape.",
+      "OpenHaven is built by a coalition of researchers and practitioners committed to open protocols. This page represents collective work — not a single organization's view of the landscape.",
   },
   {
     icon: Globe,
@@ -35,7 +35,7 @@ export function ConvergenceSection() {
             We Are Converging
           </h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            This section will be authored collaboratively by OpenHaven, CTA, DWeb, and the Atlas Research Group.
+            This section will be authored collaboratively by the OpenHaven team and community contributors.
             What follows is a placeholder — the real narrative is being written together.
           </p>
         </div>
